@@ -12,7 +12,7 @@ LiquidCore.on( 'ping', function() {
     // Note that the payload of the event is an object.  At the moment,
     // this _must_ be an object.  Eventually it may be more relaxed.
     LiquidCore.emit( 'pong', { message: 'Hallo, die Weld!' } )
-    exit(0)
+    process.exit(0)
 })
 
 // Ok, we are all set up.  Let the host know we are ready to talk

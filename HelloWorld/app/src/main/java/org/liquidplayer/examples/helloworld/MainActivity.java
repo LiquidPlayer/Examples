@@ -77,7 +77,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 try {
-                    URI uri = new URI("http://"+serverAddr+":8080/service.js");
+                    URI uri = new URI("http://"+serverAddr+":8080/server.js");
+                    // or this ...
+                    //URI uri = new URI("http://"+serverAddr+":8080/bn.js");
                     MicroService service = new MicroService(MainActivity.this, uri, startListener);
                     service.start();
                 } catch (URISyntaxException e) {

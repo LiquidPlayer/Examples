@@ -1,0 +1,8 @@
+{
+   "configs": [
+       {
+           "file": "bn.js",
+           "transforms": [ "uglifyify" ]
+       }
+   ]
+}
