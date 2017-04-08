@@ -30,7 +30,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 import org.liquidplayer.service.LiquidView;
 import org.liquidplayer.service.MicroService;
-import org.liquidplayer.surfaces.console.ConsoleSurface;
+import org.liquidplayer.surface.console.ConsoleSurface;
 
 import java.io.File;
 import java.net.URI;

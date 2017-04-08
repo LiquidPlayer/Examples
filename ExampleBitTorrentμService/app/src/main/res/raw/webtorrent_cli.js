@@ -74736,7 +74736,7 @@ function unref (iv) {
 
 },{"../package.json":429,"airplay-js":2,"child_process":undefined,"chromecasts":50,"clivas":52,"create-torrent":58,"dlnacasts":64,"ecstatic":67,"executable":92,"fs":undefined,"http":undefined,"mime":279,"minimist":282,"moment":284,"network-address":295,"nodebmc":299,"parse-torrent":303,"path":undefined,"prettier-bytes":308,"vlc-command":372,"webtorrent":373,"webtorrent/package.json":382}],431:[function(require,module,exports){
 LiquidCore.attach(
-    'org.liquidplayer.surfaces.console.ConsoleSurface',
+    'org.liquidplayer.surface.console.ConsoleSurface',
     (error) => {
         if (!error) {
             require('./webtorrent_cli/webtorrent_cli.js')
