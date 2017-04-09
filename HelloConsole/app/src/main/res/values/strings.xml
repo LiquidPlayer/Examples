@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">HelloConsole</string>
+    <string name="console">.console.ConsoleSurface</string>
 </resources>

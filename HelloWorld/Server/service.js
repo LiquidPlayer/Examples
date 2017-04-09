@@ -9,11 +9,9 @@ setInterval(function() {}, 1000)
 LiquidCore.on( 'ping', function() {
     // When we get the ping from the host, respond with "Hello, World!"
     // and then exit.
-    // Note that the payload of the event is an object.  At the moment,
-    // this _must_ be an object.  Eventually it may be more relaxed.
     LiquidCore.emit( 'pong', { message: 'Hallo, die Weld!' } )
     process.exit(0)
 })
 
 // Ok, we are all set up.  Let the host know we are ready to talk
-LiquidCore.emit( 'ready', {} ) // Again, the object is a must at the moment
+LiquidCore.emit( 'ready' )

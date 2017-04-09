@@ -36,8 +36,7 @@ public class MainActivity extends AppCompatActivity {
         final EventListener readyListener = new EventListener() {
             @Override
             public void onEvent(MicroService service, String event, JSONObject payload) {
-                JSONObject obj = new JSONObject();
-                service.emit("ping", obj);
+                service.emit("ping");
             }
         };
 
@@ -77,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 try {
-                    URI uri = new URI("http://"+serverAddr+":8080/server.js");
+                    URI uri = new URI("http://"+serverAddr+":8080/service.js");
                     // or this ...
                     //URI uri = new URI("http://"+serverAddr+":8080/bn.js");
                     MicroService service = new MicroService(MainActivity.this, uri, startListener);

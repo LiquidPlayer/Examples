@@ -10,4 +10,4 @@ LiquidCore.on( 'ping', function() {
     process.exit(0)
 })
 
-LiquidCore.emit( 'ready', {} ) // Again, the object is a must at the moment
+LiquidCore.emit( 'ready' )
