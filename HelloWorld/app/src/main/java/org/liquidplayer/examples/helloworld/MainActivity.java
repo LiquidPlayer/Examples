@@ -13,6 +13,7 @@ import org.json.JSONObject;
 import org.liquidplayer.service.MicroService;
 import org.liquidplayer.service.MicroService.ServiceStartListener;
 import org.liquidplayer.service.MicroService.EventListener;
+import org.liquidplayer.service.Synchronizer;
 
 import java.net.URI;
 import java.net.URISyntaxException;
@@ -20,7 +21,7 @@ import java.net.URISyntaxException;
 public class MainActivity extends AppCompatActivity {
 
     // IMPORTANT: Replace this with YOUR server's address or name
-    private final String serverAddr = "192.168.1.152";
+    private final String serverAddr = "192.168.2.152";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
         // environment is set up
         final ServiceStartListener startListener = new ServiceStartListener() {
             @Override
-            public void onStart(MicroService service) {
+            public void onStart(MicroService service, Synchronizer synchronizer) {
                 service.addEventListener("ready", readyListener);
                 service.addEventListener("pong", pongListener);
             }

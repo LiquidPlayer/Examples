@@ -30,6 +30,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 import org.liquidplayer.service.LiquidView;
 import org.liquidplayer.service.MicroService;
+import org.liquidplayer.service.Synchronizer;
 import org.liquidplayer.surface.console.ConsoleSurface;
 
 import java.io.File;
@@ -278,7 +279,7 @@ public class ItemView extends LinearLayout {
             object.setDownloading(true);
             liquidView.enableSurface(ConsoleSurface.class);
             liquidView.addServiceStartListener(new MicroService.ServiceStartListener() {
-                @Override public void onStart(MicroService service) {
+                @Override public void onStart(MicroService service, Synchronizer synchronizer) {
                     object.setServiceId(service.getId());
                     service.addEventListener("torrent_done", doneListener);
                     service.addEventListener("draw", drawListener);
