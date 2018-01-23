@@ -39,7 +39,7 @@ import java.net.URI;
 public class ItemView extends LinearLayout {
 
     private final URI consoleURI =
-            URI.create("android.resource://"+ getContext().getPackageName()+ "/raw/webtorrent_cli");
+            URI.create("android.resource://"+ getContext().getPackageName()+ "/raw/webtorrent");
     private static int port = 8080;
 
     private final Handler uiThread = new Handler(Looper.getMainLooper());

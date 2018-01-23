@@ -1,0 +1,14 @@
+{
+  "name": "webtorrent_lq",
+  "version": "1.0.0",
+  "description": "Webtorrent CLI for LiquidCore",
+  "main": "webtorrent.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+    "dependencies": {
+    "webtorrent-cli": "^1.11.0"
+  },
+  "author": "",
+  "license": "ISC"
+}

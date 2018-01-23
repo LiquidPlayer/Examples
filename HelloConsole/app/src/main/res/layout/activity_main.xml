@@ -15,7 +15,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/liquidview"
-        custom:liquidcore.URI="http://192.168.2.152:8080/console.js"
+        custom:liquidcore.URI="http://192.168.2.153:8080/console.js"
         custom:liquidcore.surface="@string/console"
         />
 </RelativeLayout>
