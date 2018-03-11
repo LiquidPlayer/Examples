@@ -27,6 +27,6 @@ dependencies {
     implementation 'com.android.support:appcompat-v7:26.1.0'
     implementation 'com.android.support:design:26.1.0'
     testImplementation 'junit:junit:4.12'
-    implementation 'com.github.LiquidPlayer:ConsoleSurface:0.4.4'
-    implementation 'com.github.LiquidPlayer:LiquidCore:0.4.4'
+    implementation 'com.github.LiquidPlayer:ConsoleSurface:0.4.6'
+    implementation 'com.github.LiquidPlayer:LiquidCore:0.4.6'
 }
