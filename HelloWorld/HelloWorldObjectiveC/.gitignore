@@ -81,7 +81,7 @@ Carthage/Build.rbenv-vars
 Carthage/
 !Cartfile
 !Cartfile.private
-!Cartfile.resolved
+Cartfile.resolved
 
 ####
 # Fastlane
