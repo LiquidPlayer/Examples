@@ -2,11 +2,11 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 26
-    buildToolsVersion '26.0.2'
+    buildToolsVersion '28.0.3'
     defaultConfig {
         applicationId "org.liquidplayer.examples.helloworld"
         minSdkVersion 17
-        targetSdkVersion 26
+        targetSdkVersion 28
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
@@ -26,5 +26,5 @@ dependencies {
     })
     implementation 'com.android.support:appcompat-v7:26.1.0'
     testImplementation 'junit:junit:4.12'
-    implementation 'com.github.LiquidPlayer:LiquidCore:0.3.0'
+    implementation 'com.github.LiquidPlayer:LiquidCore:0.5.1'
 }

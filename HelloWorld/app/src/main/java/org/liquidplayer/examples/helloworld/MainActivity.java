@@ -13,7 +13,6 @@ import org.json.JSONObject;
 import org.liquidplayer.service.MicroService;
 import org.liquidplayer.service.MicroService.ServiceStartListener;
 import org.liquidplayer.service.MicroService.EventListener;
-import org.liquidplayer.service.Synchronizer;
 
 import java.net.URI;
 import java.net.URISyntaxException;
@@ -66,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
         // environment is set up
         final ServiceStartListener startListener = new ServiceStartListener() {
             @Override
-            public void onStart(MicroService service, Synchronizer synchronizer) {
+            public void onStart(MicroService service) {
                 service.addEventListener("ready", readyListener);
                 service.addEventListener("pong", pongListener);
             }
@@ -76,15 +75,9 @@ public class MainActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                try {
-                    URI uri = new URI("http://"+serverAddr+":8080/service.js");
-                    // or this ...
-                    //URI uri = new URI("http://"+serverAddr+":8080/bn.js");
-                    MicroService service = new MicroService(MainActivity.this, uri, startListener);
-                    service.start();
-                } catch (URISyntaxException e) {
-                    e.printStackTrace();
-                }
+                URI uri = MicroService.DevServer();
+                MicroService service = new MicroService(MainActivity.this, uri, startListener);
+                service.start();
             }
         });
     }

@@ -1,2 +1,2 @@
 # Require LiquidCore
-git "git@github.com:LiquidPlayer/LiquidCore.git" ~> 0.5.0
+git "git@github.com:LiquidPlayer/LiquidCore.git" ~> 0.5.1

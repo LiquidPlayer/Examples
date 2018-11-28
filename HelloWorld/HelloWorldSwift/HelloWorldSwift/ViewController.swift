@@ -9,8 +9,6 @@
 import UIKit
 import LiquidCore
 
-let serverAddr = "192.168.21.113:8080"
-
 class ViewController: UIViewController, LCMicroServiceDelegate, LCMicroServiceEventListener {
 
     var text: UILabel = UILabel()
@@ -46,17 +44,17 @@ class ViewController: UIViewController, LCMicroServiceDelegate, LCMicroServiceEv
     }
     
     @objc func onTouch(sender:UIButton!) {
-        let url = URL(string:"http://" + serverAddr + "/service.js")
+        let url = LCMicroService.devServer()
         let service = LCMicroService(url: url!, delegate: self)
         service?.start()
     }
     
-    func onStart(_ service: LCMicroService!, synchronizer: LCSynchronizer?) {
+    func onStart(_ service: LCMicroService) {
         service.addEventListener("ready", listener: self)
         service.addEventListener("pong", listener: self)
     }
     
-    func onEvent(_ service: LCMicroService!, event: String!, payload: Any?) {
+    func onEvent(_ service: LCMicroService, event: String, payload: Any?) {
         if event == "ready" {
             service.emit("ping")
         } else if event == "pong" {

@@ -54,17 +54,14 @@
                                options:0 metrics:nil views:views]];
 }
 
-// IMPORTANT: Replace this with YOUR server's address or name
-static const NSString* serverAddr = @"192.168.21.113:8080";
-
 - (void) onTouch:(UIButton*)sender
 {
-    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://%@/service.js", serverAddr]];
+    NSURL *url = [LCMicroService devServer];
     LCMicroService *service = [[LCMicroService alloc] initWithURL:url delegate:self];
     [service start];
 }
 
-- (void) onStart:(LCMicroService *)service synchronizer:(LCSynchronizer *)synchronizer
+- (void) onStart:(LCMicroService *)service
 {
     [service addEventListener:@"ready" listener:self];
     [service addEventListener:@"pong" listener:self];
