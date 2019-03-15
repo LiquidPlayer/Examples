@@ -1,0 +1,10 @@
+platform :ios, '10.0'
+use_frameworks!
+
+source 'https://github.com/LiquidPlayer/Specs.git'
+source 'https://github.com/CocoaPods/Specs.git'
+
+target 'HelloWorldSwift' do
+  pod 'LiquidCore', '0.6.0'
+end
+

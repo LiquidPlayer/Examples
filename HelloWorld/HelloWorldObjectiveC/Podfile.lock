@@ -1,0 +1,16 @@
+PODS:
+  - LiquidCore (0.6.0)
+
+DEPENDENCIES:
+  - LiquidCore (= 0.6.0)
+
+SPEC REPOS:
+  https://github.com/LiquidPlayer/Specs.git:
+    - LiquidCore
+
+SPEC CHECKSUMS:
+  LiquidCore: 15368c7cbafa35d4590204be1d2d2e9007bcf412
+
+PODFILE CHECKSUM: 75a6e9d773560f4c201ed7d31c874d6873df6934
+
+COCOAPODS: 1.5.3

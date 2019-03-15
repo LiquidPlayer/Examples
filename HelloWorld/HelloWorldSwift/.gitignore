@@ -102,3 +102,5 @@ Cartfile.resolved
 ####
 # rbenv
 .rbenv-vars
+
+/HelloWorldSwift.xcworkspace

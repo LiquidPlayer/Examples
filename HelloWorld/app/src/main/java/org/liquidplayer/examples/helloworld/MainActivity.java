@@ -15,20 +15,16 @@ import org.liquidplayer.service.MicroService.ServiceStartListener;
 import org.liquidplayer.service.MicroService.EventListener;
 
 import java.net.URI;
-import java.net.URISyntaxException;
 
 public class MainActivity extends AppCompatActivity {
-
-    // IMPORTANT: Replace this with YOUR server's address or name
-    private final String serverAddr = "192.168.2.152";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        final TextView textView = (TextView) findViewById(R.id.text);
-        final Button button = (Button) findViewById(R.id.button);
+        final TextView textView = findViewById(R.id.text);
+        final Button button = findViewById(R.id.button);
 
         // Our 'ready' listener will wait for a ready event from the micro service.  Once
         // the micro service is ready, we'll ping it by emitting a "ping" event to the

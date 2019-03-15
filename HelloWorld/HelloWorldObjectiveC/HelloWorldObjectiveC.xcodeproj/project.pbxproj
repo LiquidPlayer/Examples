@@ -16,6 +16,7 @@
 		072FDAB52129E9D100557264 /* HelloWorldObjectiveCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 072FDAB42129E9D100557264 /* HelloWorldObjectiveCTests.m */; };
 		072FDAC02129E9D100557264 /* HelloWorldObjectiveCUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 072FDABF2129E9D100557264 /* HelloWorldObjectiveCUITests.m */; };
 		072FDACF2129F29000557264 /* LiquidCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 072FDACE2129F29000557264 /* LiquidCore.framework */; };
+		8229B27D303FFB96233914C6 /* Pods_HelloWorldObjectiveC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1C37AC0A6671FD9DD5FEC1A /* Pods_HelloWorldObjectiveC.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,9 @@
 		072FDABF2129E9D100557264 /* HelloWorldObjectiveCUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloWorldObjectiveCUITests.m; sourceTree = "<group>"; };
 		072FDAC12129E9D100557264 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		072FDACE2129F29000557264 /* LiquidCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LiquidCore.framework; path = Carthage/Build/iOS/LiquidCore.framework; sourceTree = "<group>"; };
+		4936FAA3BD0C51C409E93D2C /* Pods-HelloWorldObjectiveC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloWorldObjectiveC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HelloWorldObjectiveC/Pods-HelloWorldObjectiveC.debug.xcconfig"; sourceTree = "<group>"; };
+		9DD76D7A7AAC25124D5200CD /* Pods-HelloWorldObjectiveC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloWorldObjectiveC.release.xcconfig"; path = "Pods/Target Support Files/Pods-HelloWorldObjectiveC/Pods-HelloWorldObjectiveC.release.xcconfig"; sourceTree = "<group>"; };
+		C1C37AC0A6671FD9DD5FEC1A /* Pods_HelloWorldObjectiveC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HelloWorldObjectiveC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +65,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				072FDACF2129F29000557264 /* LiquidCore.framework in Frameworks */,
+				8229B27D303FFB96233914C6 /* Pods_HelloWorldObjectiveC.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,6 +94,7 @@
 				072FDABE2129E9D100557264 /* HelloWorldObjectiveCUITests */,
 				072FDA992129E9CF00557264 /* Products */,
 				072FDACD2129F29000557264 /* Frameworks */,
+				54F08E803B7688D86EB21509 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -140,8 +146,18 @@
 			isa = PBXGroup;
 			children = (
 				072FDACE2129F29000557264 /* LiquidCore.framework */,
+				C1C37AC0A6671FD9DD5FEC1A /* Pods_HelloWorldObjectiveC.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		54F08E803B7688D86EB21509 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4936FAA3BD0C51C409E93D2C /* Pods-HelloWorldObjectiveC.debug.xcconfig */,
+				9DD76D7A7AAC25124D5200CD /* Pods-HelloWorldObjectiveC.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,10 +167,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 072FDAC42129E9D100557264 /* Build configuration list for PBXNativeTarget "HelloWorldObjectiveC" */;
 			buildPhases = (
+				24ADF4BFABE9A5F61F3AD969 /* [CP] Check Pods Manifest.lock */,
 				072FDA942129E9CF00557264 /* Sources */,
 				072FDA952129E9CF00557264 /* Frameworks */,
 				072FDA962129E9CF00557264 /* Resources */,
-				072FDAD02129F2AD00557264 /* ShellScript */,
+				899FB8B55B7D193BE71AC51B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -271,20 +288,49 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		072FDAD02129F2AD00557264 /* ShellScript */ = {
+		24ADF4BFABE9A5F61F3AD969 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
+			inputFileListPaths = (
+			);
 			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/LiquidCore.framework",
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/LiquidCore.framework",
+				"$(DERIVED_FILE_DIR)/Pods-HelloWorldObjectiveC-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		899FB8B55B7D193BE71AC51B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-HelloWorldObjectiveC/Pods-HelloWorldObjectiveC-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/LiquidCore/LiquidCore.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LiquidCore.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HelloWorldObjectiveC/Pods-HelloWorldObjectiveC-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -462,6 +508,7 @@
 		};
 		072FDAC52129E9D100557264 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4936FAA3BD0C51C409E93D2C /* Pods-HelloWorldObjectiveC.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -482,6 +529,7 @@
 		};
 		072FDAC62129E9D100557264 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9DD76D7A7AAC25124D5200CD /* Pods-HelloWorldObjectiveC.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

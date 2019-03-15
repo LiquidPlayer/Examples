@@ -45,7 +45,7 @@ class ViewController: UIViewController, LCMicroServiceDelegate, LCMicroServiceEv
     
     @objc func onTouch(sender:UIButton!) {
         let url = LCMicroService.devServer()
-        let service = LCMicroService(url: url!, delegate: self)
+        let service = LCMicroService(url: url, delegate: self)
         service?.start()
     }
     
